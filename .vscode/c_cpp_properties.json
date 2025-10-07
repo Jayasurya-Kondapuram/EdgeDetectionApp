@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Android NDK",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/jayas/AppData/Local/Android/Sdk/ndk/**/sysroot/usr/include",
+                "C:/Users/jayas/AppData/Local/Android/Sdk/ndk/**/sysroot/usr/include/aarch64-linux-android"
+            ],
+            "defines": [
+                "__ANDROID__",
+                "__ANDROID_API__=21"
+            ],
+            "compilerPath": "C:/Users/jayas/AppData/Local/Android/Sdk/ndk/**/bin/aarch64-linux-android-clang++.cmd",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
