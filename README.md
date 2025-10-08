@@ -44,33 +44,6 @@ Camera Feed → Android App → JNI Bridge → OpenCV C++ → Edge Detection →
 
 ![Project Structure](screenshot/Structural_Flow.png)
 
-EdgeDetectionApp/
-├── 📱 app/                          # Android Application
-│   ├── src/main/
-│   │   ├── java/com/example/edgedetection/
-│   │   │   ├── MainActivity.java
-│   │   │   └── CameraManager.java
-│   │   ├── cpp/                     # Native C++ Code
-│   │   │   ├── CMakeLists.txt
-│   │   │   └── native-lib.cpp
-│   │   └── res/                     # Android Resources
-│   │       ├── layout/
-│   │       ├── values/
-│   │       └── ...
-│   ├── build.gradle
-│   └── proguard-rules.pro
-├── 🌐 web/                          # TypeScript Web Viewer
-│   ├── src/
-│   │   ├── index.html
-│   │   └── index.js
-│   ├── dist/
-│   ├── assets/
-│   └── package.json
-├── 📄 build.gradle                  # Root Build Configuration
-├── 📄 settings.gradle              # Project Settings
-├── 📄 README.md                    # Project Documentation
-└── 📄 .gitignore                   # Git Ignore Rules
-
 
 ## 🚀 Setup Instructions
 
