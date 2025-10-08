@@ -1,0 +1,12 @@
+{
+  "name": "edge-detection-web-viewer",
+  "version": "1.0.0",
+  "description": "Web viewer for Android edge detection app",
+  "main": "src/index.js",
+  "scripts": {
+    "serve": "http-server src -p 3000"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

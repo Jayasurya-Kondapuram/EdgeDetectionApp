@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Detection Web Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;.\gradlew projects
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .frame-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #processedFrame {
+            max-width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .stats {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .stat-item {
+            margin: 5px 0;
+            font-family: monospace;
+        }
+
+        .controls {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🔍 Edge Detection Web Viewer</h1>
+
+    <div class="stats">
+        <h3>📊 Frame Statistics</h3>
+        <div class="stat-item">Status: <span id="status">Waiting for frame...</span></div>
+        <div class="stat-item">Resolution: <span id="resolution">-</span></div>
+        <div class="stat-item">FPS: <span id="fps">-</span></div>
+        <div class="stat-item">Last Update: <span id="lastUpdate">-</span></div>
+    </div>
+
+    <div class="frame-container">
+        <h3>🖼️ Processed Frame</h3>
+        <img id="processedFrame" src="" alt="Processed edge detection frame">
+        <div id="frameInfo" class="loading">No frame received yet</div>
+    </div>
+
+    <div class="controls">
+        <button id="loadSampleBtn">Load Sample Frame</button>
+        <button id="simulateLiveBtn">Simulate Live Feed</button>
+        <button id="clearBtn">Clear Display</button>
+    </div>
+
+    <div class="stats">
+        <h3>🔧 Debug Information</h3>
+        <div class="stat-item">WebSocket Status: <span id="wsStatus">Not connected</span></div>
+        <div class="stat-item">Frames Received: <span id="framesReceived">0</span></div>
+    </div>
+</div>
+
+<script type="module" src="index.js"></script>
+</body>
+</html>

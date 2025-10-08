@@ -3,28 +3,18 @@ cmake_minimum_required(VERSION 3.18.1)
 # Project name
 project("edgedetection")
 
-# Add OpenCV (we'll download this later)
-# For now, we'll create a basic native library
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Create library
-add_library(
-    edgedetection
-    SHARED
-    native-lib.cpp
-)
+project("edgedetection")
 
-# Find required packages
-find_library(
-    log-lib
-    log
-)
+add_library(edgedetection SHARED native-lib.cpp)
 
-# Link libraries
-target_link_libraries(
-    edgedetection
-    android
-    ${log-lib}
-)
+find_library(log-lib log)
+
+target_link_libraries(edgedetection ${log-lib})
 
 # Include directories
 include_directories(src/main/cpp/include)
